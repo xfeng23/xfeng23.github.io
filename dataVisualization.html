@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<!-- head -->
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Data Visualization Project</title>
+
+  <!-- bulma 0.7.4 and font awesome v5.8.1 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.css">
+  <script src=" https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- faviconlin-->
+  <!--https://www.flaticon.com/free-icon/snowflake_642000-->
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
+</head>
+
+<!-- body -->
+<body>
+
+  <!-- header -->
+  <section class="hero is-white">
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <strong>Xue Feng👩🏻</strong>
+        </a>
+      </div>
+
+      <div class="navbar-menu">
+        <div class="navbar-start">
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Leetcode
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="dataStructure.html">
+                Data Structure
+              </a>
+              <a class="navbar-item" href="algorithms.html">
+                Algorithms
+              </a>
+              <!-- <hr class="navbar-divider"> -->
+            </div>
+          </div>
+
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Projects
+            </a>
+
+            <div class="navbar-dropdown">
+              <a class="navbar-item" href="dataVisualization.html">
+                Data Visualization
+              </a>
+              <a class="navbar-item" href="machineLearning.html">
+                Machine Learning
+              </a>
+              <!-- <hr class="navbar-divider"> -->
+            </div>
+          </div>
+        </div>
+
+        <div class="navbar-end">
+          <a class="navbar-item" href="aboutMe.html">
+            About Me
+          </a>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+  <!-- separator between sections -->
+  <hr class="container">
+
+
+  <!-- todo: add sections as necessary -->
+  <section class="section">
+    <div class="container content">
+      <span class="is-pulled-left">
+        <h2>🏡Analysis of U.S. Real Estate Market with D3v5🏡</center></h2>
+        <span class="tag is-danger">HTML/CSS</span>
+        <span class="tag is-success">JavaScript</span>
+      </span>
+    </section>
+    <section class="section">
+      <div class="container content">
+        <p>
+          The idea of analyzing the U.S. real estate market came in to my mind because I am passionate about how the U.S. house price trend changes and how it affects our life. There are many times that I want to know if investment of a house in location A is valuable or not at that time. It's interesting to hear from friends around me saying that who buys a house and then the house price increases in the otehr year, or, unluckily, decreases due to some reasons. So I am very curious about how the U.S. house price changed over these years. <br/><br/>Therefore, I decided to do a project to analyze the overall U.S. house price trend in the U.S. by creating a <b>D3v5 proportional symbol map</b>.<br/><br/>
+        </p>
+        <div class="container content">
+          <!-- todo: modify as necessary (or move visualizations to separate pages) -->
+          <h2><light><center>U.S. House Sales Price Ten Years Growth Trend</center></light></h2><br/>
+
+          <svg width="960" height="600" id="vis">
+            <!-- put groups in order want ahead of time -->
+            <g id="basemap"></g>
+
+            <!-- theses groups should not capture pointer events -->
+            <g id="outline" pointer-events="none"></g>
+            <g id="table"></g>
+            <g id="salesDiff"></g>
+            <g id="rentalDiff"></g>
+            <g id="tooltip" pointer-events="none"></g>
+            <g id="details" pointer-events="none"></g>
+          </svg>
+
+          <!-- <div class="dropdown is-right">
+          <select id = "dropdownButton">
+          <option value = "salesDiff">Sales Trend</option>
+          <option value = "rentalDiff">Rental Trend</option>
+        </select>
+      </div> -->
+
+      <h2>Interpretation</h2>
+
+      <p>
+        This D3v5 proportional symbol map, "U.S. House Sale Prices Ten Years Growth Trend" analyzes the U.S. house growth trend from March 2009 to December 2018, which is approximately a 10 year trend.
+
+      </p>
+
+      <h3>Interactivities</h3>
+      <p>
+        a) The user can visualize the size of each single bubble as each city's ten-year sales price difference.
+        <br/><br/>
+        <!-- b) By selecting a drop down box, the user has two options of visualizations: U.S. house sales price and U.S. house rental price.
+        <br/><br/> -->
+
+        b) When the user mouses over a single state, the name of the state will be shown.
+        <br/><br/>
+        c) When the user mouses over a single bubble, the bubble will show a more specific bar chart which represents that specific city's year by year sales/rental price difference. At the same time, the city name, state name where the city is at, and the ten-year house price difference of that bubble/city will be dispalyed in the top of the map.
+      </p>
+      <h3>What Can We Learn from the Visualization?</h3>
+
+      <p>
+        We can learn a lot from this interactive visualization. Although if I do not look at details, I still can visualize that "San Jose" has the biggest 10 year house sales price difference among the whole U.S., when I mouse over the bubble representing "San Jose", which is the biggest bubble in CA(or the U.S.), I can see that the house sales price in the year 2010~2011 from the yearly price difference bar chart is, interestingly, decreasing.      </p>
+      </div>
+
+
+      <p>
+        I use <a href="https://data.sfgov.org/Public-Safety/Fire-Department-Calls-for-Service/nuek-vuh3" >Fire Department Calls for Service</a> as my data source. I filter a three-month data from <b>1/1/2019 to 3/31/2019</b>. Data license can be found <a href="https://opendatacommons.org/licenses/pddl/1.0/" >here</a>.
+
+      </p>
+
+      <h2>
+        [Behind the Scenes]
+      </h2>
+      <h3>1️⃣ Raw Data</h3>
+      <p>
+        <br/>
+        🔗<b>One TopoJSON Dataset</b>
+        <br/><br/>
+
+        <b><a href="http://bl.ocks.org/michellechandra/0b2ce4923dc9b5809922" >Basic US State Map - D3</a></b> - In order to implement U.S. state boundaries, I used the D3 data by author Michelle Chandra.
+        <br/><br/>
+        <b>Data license</b> was requested from the author's  <a href="https://github.com/michellechandra" >GitHub page</a>.
+        <br/><br/>
+        <b>Data Size</b>
+        <br/>
+        Total rows: NA
+        <br/>
+        Total columns: NA
+        <br/>
+        File size: 21KB
+        <br/><br/>
+
+        🔗<b>Two CSV Datasets</b>
+
+        <br/><br/>
+
+        In order to analyze the trend of the real estate market from different perspectives, I collected the data from <a href="https://www.zillow.com/research/data/" ><b>Zillow Research Data</b></a>.
+        <br/><br/>
+        <b>Data license</b> can be found <a href="https://www.zillow.com/corp/Terms.htm" >here</a>.
+        <br/><br/>
+        More specifically, I chose the subject of <b>Home Listings and Sales</b> from the website data page. I downloaded the dataset by filtering "Data Type" as "Median Sale Price - Seasonally Adjusted ($)" and "Geography" as "Metro & U.S.".
+        <br/><br/>
+        At the same time, I also chose <b>Rental Listings</b> from the website as my second analysis target. I downloaded the dataset by filtering "Home Type" as "Median List Price ($) - 2-Bedroom" and "Geography" as "Metro & U.S.".
+
+        <br/><br/>
+
+        <b>Home Listings and Sales</b> - "Zillow provides data on sold homes, including median sale price for various housing types, sale counts (for which there’s detailed methodology), and foreclosures provided as a share of all sales in which the home was previously foreclosed upon. There is also current and historical for-sale listings data, ranging from median list prices and inventory counts to share of listings with a price cut, median price cut size, age of inventory, and the days a listing spent on Zillow before the sale was final. Inventory and other housing data also are available for local markets."
+
+        <br/><br/>
+        <b>Data Size</b>
+        <br/>
+        Total rows: 493
+        <br/>
+        Total columns: 112
+        <br/>
+        File size: 340KB
+        <br/><br/>
+
+        <b>Rental Listings</b> - "Zillow Rent Index (ZRI): A smoothed measure of the median estimated market rate rent across a given region and housing type. ZRI is a dollar-denominated alternative to repeat-rent indices. Zillow publishes ZRI and other housing data for local markets as well as its ZRI methodology."
+        <br/><br/>
+        <b>Data Size</b>
+        <br/>
+        Total rows: 358
+        <br/>
+        Total columns: 86
+        <br/>
+        File size: 119KB
+        <br/><br/>
+        **According to the description of both datasets, Zillow has already done the <b>seasonal adjustment</b> by using <a href="https://www.census.gov/srd/www/x13as/">The X-13ARIMA-SEATS Seasonal Adjustment</a> from <a href="https://www.census.gov/en.html">United States Census Bureau</a>.
+        <br/>
+      </p>
+      <h3>2️⃣ Raw Data Processing</h3>
+      <p>
+        <br/>
+        <b>1. D3 Map with States and Countries</b>
+        <br/><br/>
+        a) I converted the raw data "D3 Map with States and Countries" from <b>.topojson</b> into <b>.geojson</b> format by using this <a href="http://bl.ocks.org/enjalot/63d06e2ccadad0cb30dc5f920efd1cdf">online converter</a> by Ian Johnson.
+        <br/>
+        b) I manually edited all the full names of U.S. states into abbreviations by using <a href="https://notepad-plus-plus.org/">Notepad ++</a>. For example, "California" -> "CA". I do so in order to combine "State" column in the <i>us_states.geojson</i> file with my other 2 datasets from Zillow.
+        <br/><br/>
+        (file source: <i>us_states.geojson</i>)
+        <br/><br/>
+        <b>2. Home Listings and Sales</b>
+        <br/><br/>
+        a) I parsed one column with the format of [City, State] into two separate columns named "city" and "state" by using <a href="https://pandas.pydata.org/">Python Pandas library</a>. For example, [San Francisco, CA] -> [San Francisco], [CA].
+        <br/>
+        b) In order to generate "longitude" and "latitude" columns, I imported the two datasets on <a href="https://www.tableau.com/">Tableau</a>, and the "longidue" and "latitude" are generated.
+        <br/>
+        c) I generated one more "TenYrSalesDiff" column, which stands for ten-year U.S. house sales price difference of each city in the U.S., by using the difference between each house price from Dec 2011 and each house price from Mar 2009.
+        <br/>
+        d) Moreover, in order to generate each city's yearly sales price difference, I generated 9 more columns, which are year by year sales price differences from Dec 2011 to Mar 2019.
+        <br/>
+        e) For the second visualization, I generated the tenYrGrowRate, which stands for a ten-year U.S. sales price growth rate.
+        <br/>
+        <i>How to Calculate Growth Rate
+          <br/>
+          Let:
+          <br/>
+          <b>P(A)</b> = House A's Price 10 Years Before
+          <br/>
+          <b>g</b> = Growth Rate in 10 Years
+          <br/>
+          <b>P'(A)</b> = Present House A's Price
+          <br/>
+          👉🏼Price of House A after 10 Years is: P'(A) = P(A)*(1 + g)%
+          <br/>
+          👉🏼<b>Formula - Growth Rate, g, of House A after 10 Years is: g = P'(A)/P(A)*100 - 100</b></i>
+          <br/><br/>
+          (file source: <i>SalesDifference.csv</i>)
+          <br/><br/>
+          <b>3. Rental Listings</b>
+          <br/><br/>
+          Since this dataset has overlapped columns with <b>2. Home Listings and Sales</b>, all processing steps are the same as above.
+          <br/><br/>
+          (file source: <i>RentalDifference.csv</i>)
+          <br/><br/>
+
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- separator between sections -->
+  <hr class="container">
+
+</section>
+<!-- separator between sections -->
+<hr class="container">
+
+<!-- footer -->
+<footer class="footer">
+  <div class="content has-text-centered">
+    <small>
+      <a href="#top">
+        <span class="fas fa-arrow-up"></span>
+        <span>Back to Top</span>
+      </a>
+    </small>
+  </div>
+</footer>
+
+<!-- include d3.js -->
+<!-- <script src="http://d3js.org/d3.v3.js"></script> -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js" integrity="sha256-qo76Vs9B6JAALbrTn+PcN1r09hbNLd2M78V19glOMeU=" crossorigin="anonymous"></script>
+<script src="vis1.js"></script>
+
+<!-- end body and html -->
+</body>
+</html>
