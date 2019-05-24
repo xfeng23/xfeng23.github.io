@@ -70,3 +70,7 @@ circle.symbol {
   fill: lightsteelblue;
   fill-opacity: 0.9;
 }
+
+@media screen and (max-width: 900px) {
+  #vis {width = "100%"; height = "10%";}
+}
