@@ -41,7 +41,7 @@
           </div>
         </div>
 
-        <div id="navMenuBlog" class="navbar-menu is-start">
+        <div id="navMenuBlog" class="navbar-menu is-start" #navMenu>
 
           <div class="navbar-start">
             <div class="navbar-item has-dropdown is-hoverable">
@@ -84,6 +84,11 @@
         </div>
 
       </div>
+      <a (click)="toggleNavbar()" role="button" #navBurger class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </nav>
 
 
