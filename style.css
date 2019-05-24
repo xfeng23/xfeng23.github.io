@@ -1,5 +1,8 @@
+<link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+
 body {
   background-color: hsl(48, 100%, 67%);
+  font-family: 'Stylish', sans-serif;
 }
 
 .d3-tip {
@@ -69,4 +72,8 @@ circle.symbol {
 .negative{
   fill: lightsteelblue;
   fill-opacity: 0.9;
+}
+
+@media screen and (max-width: 900px) {
+  #vis {width: 100%; height: 10%;}
 }
