@@ -72,5 +72,5 @@ circle.symbol {
 }
 
 @media screen and (max-width: 900px) {
-  #vis {width: 100%; height: 10%;}
+  #vis {width: 80%; height: 10%;}
 }
