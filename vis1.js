@@ -24,6 +24,7 @@ var attr = {
     top: 25,
     right: 160
   },
+  
   plotWidth: svg.node().getBoundingClientRect().width,
   plotHeight: svg.node().getBoundingClientRect().height,
 }
