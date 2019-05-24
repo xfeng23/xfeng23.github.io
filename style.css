@@ -1,8 +1,10 @@
-<link href="https://fonts.googleapis.com/css?family=Stylish&display=swap" rel="stylesheet">
+<style>
+@import url('https://fonts.googleapis.com/css?family=Stylish&display=swap');
+</style>
 
 body {
   background-color: hsl(48, 100%, 67%);
-  font-family: 'Stylish', sans-serif;
+
 }
 
 .d3-tip {
