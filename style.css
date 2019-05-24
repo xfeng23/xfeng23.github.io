@@ -1,5 +1,5 @@
 body {
-    background-color: hsl(48, 100%, 67%);
+  background-color: hsl(48, 100%, 67%);
 }
 
 .d3-tip {
@@ -10,7 +10,7 @@ body {
   font-size: 12px;
   fill: black;
 }
- 
+
 #tooltip {
   font-weight: 600;
   text-shadow: 0px 0px 2px white;
@@ -63,10 +63,10 @@ circle.symbol {
 }
 
 .positive{
-		fill: #A52A2A;
-		fill-opacity: 0.9;
-	}
+  fill: #A52A2A;
+  fill-opacity: 0.9;
+}
 .negative{
-		fill: lightsteelblue;
-		fill-opacity: 0.9;
-	}
+  fill: lightsteelblue;
+  fill-opacity: 0.9;
+}
