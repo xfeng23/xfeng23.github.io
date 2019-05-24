@@ -12,23 +12,23 @@ const colors = {
   "rentalDiff": "#01519b",
 }
 
+// Setup color scale
+const colorScale = d3.scaleOrdinal()
+.range(Object.entries(colors).map(e => e[1]))
+.domain(Object.entries(colors).map(e => e[0]));
+
+var svg = d3.select("body").select("svg#vis");
+
 var attr = {
   plotWidth: 900,
   plotHeight: 600,
   margin: {
     top: 25,
     right: 160
-  }
+  },
+  plotWidth: svg.node().getBoundingClientRect().width,
+  plotHeight: svg.node().getBoundingClientRect().height,
 }
-
-// Setup color scale
-const colorScale = d3.scaleOrdinal()
-.range(Object.entries(colors).map(e => e[1]))
-.domain(Object.entries(colors).map(e => e[0]));
-
-
-
-var svg = d3.select("body").select("svg#vis");
 
 var g = {
   basemap: svg.select("g#basemap"),
