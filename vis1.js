@@ -20,8 +20,6 @@ const colorScale = d3.scaleOrdinal()
 var svg = d3.select("body").select("svg#vis");
 
 var attr = {
-  plotWidth: 900,
-  plotHeight: 600,
   margin: {
     top: 25,
     right: 160
