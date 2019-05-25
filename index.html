@@ -18,103 +18,88 @@
   <!--https://www.flaticon.com/free-icon/snowflake_642000-->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="image/favicon.ico" type="image/x-icon">
-
 </head>
 
 <!-- body -->
 <body>
-
   <!-- header -->
   <section class="hero is-white">
 
     <nav id="navbar" class="navbar">
-
-        <div class="navbar-brand">
-          <a class="navbar-item" href="index.html">
-            <strong>Xue Feng👩🏻</strong>
-          </a>
-
-          <a role="button" #navBurger class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenuID" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
-        </div>
-
-
-        <div id="navMenuID" class="navbar-menu is-start" #navMenu>
-
-          <div class="navbar-start">
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Leetcode
-              </a>
-              <div id="moreDropdown" class="navbar-dropdown">
-                <a class="navbar-item " href="dataStructure.html">
-                  Data Structure
-                </a>
-                <a class="navbar-item " href="algorithms.html">
-                  Algorithms
-                </a>
-              </div>
-            </div>
-
-
-
-
-            <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link">
-                Projects
-              </a>
-              <div id="moreDropdown" class="navbar-dropdown">
-                <a class="navbar-item " href="dataVisualization.html">
-                  Data Visualization
-                </a>
-                <a class="navbar-item " href="machineLearning.html">
-                  Machine Learning
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div class="navbar-end">
-            <a class="navbar-item is-hidden-touch is-hidden-desktop-only" href="aboutMe.html" target="_blank">
-              About Me
-            </a>
-          </div>
-        </div>
-
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <strong>Xue Feng👩🏻</strong>
+        </a>
+        <a role="button" #navBurger class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenuID" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
       </div>
-
-    </nav>
-
-
-    <div class="hero-body">
-      <div class="container has-text-centered">
-        <div class = "column is-half is-offset-one-quarter">
-          <h1 class = "subtitle is-2 has-text-weightlight">
-            <strong>
-              <p>
-                <span class = "element"></span>
-                <span class = "wrap">🖐 </span>
-              </p>
-            </strong>
-            <h3 class="subtitle is-3 has-text-justified has-text-weight-light">
-              I am <strong>Xue Feng</strong>. I study Computer Science👩🏻‍💻 at University of San Francisco. I am interested in <i>Data Visualization</i>📊 and <i>Machine Learning</i>💡.
-            </h3>
-          </h1>
-          <div class="buttons is-centered">
-            <a class="button is-outlined is-inverted is-warning" href="https://github.com/xfeng23">
-              <span class="fab fa-github"> </span>
-              <span> Github</span>
+      <div id="navMenuID" class="navbar-menu is-start" #navMenu>
+        <div class="navbar-start">
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Leetcode
             </a>
-            <a class="button is-outlined is-warning" href="https://www.linkedin.com/in/tracy-xue-feng-0b476b116/">
-              <span class="fab fa-linkedin"> </span>
-              <span>LinkedIn</span>
+            <div id="moreDropdown" class="navbar-dropdown">
+              <a class="navbar-item " href="dataStructure.html">
+                Data Structure
+              </a>
+              <a class="navbar-item " href="algorithms.html">
+                Algorithms
+              </a>
+            </div>
+          </div>
+          <div class="navbar-item has-dropdown is-hoverable">
+            <a class="navbar-link">
+              Projects
             </a>
+            <div id="moreDropdown" class="navbar-dropdown">
+              <a class="navbar-item " href="../projects/dataVisualization.html">
+                Data Visualization
+              </a>
+              <a class="navbar-item " href="machineLearning.html">
+                Machine Learning
+              </a>
+            </div>
           </div>
         </div>
-    
+        <div class="navbar-end">
+          <a class="navbar-item is-hidden-touch is-hidden-desktop-only" href="aboutMe.html" target="_blank">
+            About Me
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class = "column is-half is-offset-one-quarter">
+        <h1 class = "subtitle is-2 has-text-weightlight">
+          <strong>
+            <p>
+              <span class = "element"></span>
+              <span class = "wrap">🖐 </span>
+            </p>
+          </strong>
+          <h3 class="subtitle is-3 has-text-justified has-text-weight-light">
+            I am <strong>Xue Feng</strong>. I study Computer Science👩🏻‍💻 at University of San Francisco. I am interested in <i>Data Visualization</i>📊 and <i>Machine Learning</i>💡.
+          </h3>
+        </h1>
+        <div class="buttons is-centered">
+          <a class="button is-outlined is-inverted is-warning" href="https://github.com/xfeng23">
+            <span class="fab fa-github"> </span>
+            <span> Github</span>
+          </a>
+          <a class="button is-outlined is-warning" href="https://www.linkedin.com/in/tracy-xue-feng-0b476b116/">
+            <span class="fab fa-linkedin"> </span>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+      </div>
     </div>
     <script>
     var typed = new Typed(".element", {
